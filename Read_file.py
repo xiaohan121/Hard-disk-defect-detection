@@ -34,7 +34,7 @@ def get_stream(path):
     array_stream[:, 1] = ts_stream
     array_stream[:, 2] = xs_stream
     array_stream[:, 3] = ys_stream
-    array_stream = array_stream[10000000:10150000, :]
+    array_stream = array_stream[10000000:10100000, :]
     print(array_stream.shape[0])
     return array_stream
 
