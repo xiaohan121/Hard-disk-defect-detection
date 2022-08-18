@@ -1,6 +1,7 @@
+# 读取文件函数
+
 import h5py
 import numpy as np
-
 
 
 def get_stream(path):
@@ -26,15 +27,15 @@ def get_stream(path):
             if subgroup == 'ys':
                 dset = f[group+'/'+subgroup]
                 ys_stream = dset[()]
-    len, = event_gs_stream.shape
+    
+    len = event_gs_stream.shape[0]
     array_stream = np.zeros((len, 4))
     array_stream[:, 0] = event_gs_stream
     array_stream[:, 1] = ts_stream
     array_stream[:, 2] = xs_stream
-    print(max(xs_stream))
     array_stream[:, 3] = ys_stream
-    print(max(ys_stream))
-    array_stream = array_stream[0:200000, :]
+    array_stream = array_stream[10000000:10150000, :]
+    print(array_stream.shape[0])
     return array_stream
 
 
