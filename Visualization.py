@@ -1,7 +1,7 @@
 from cgi import print_arguments
 import matplotlib.pyplot as plt # plt 用于显示图片
 import numpy as np
-
+import cv2 as cv
 
 def visualization(array_stream, speed):
     image = np.zeros((800, 1580))
@@ -13,4 +13,7 @@ def visualization(array_stream, speed):
         image[x, y] += array_stream[i][0]
     plt.imshow(image, cmap='gray', origin='lower')
     plt.show()
-    return 0
+    image = cv.medianBlur(np.uint8(image),5)
+    circles = cv.HoughCircles(image,cv.HOUGH_GRADIENT,dp=1,minDist=100,param1=50,param2=30,minRadius=250,maxRadius=400)
+    print(circles)
+    return circles[0]
