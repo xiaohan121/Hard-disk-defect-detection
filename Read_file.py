@@ -26,8 +26,7 @@ def get_stream(path):
                 xs_stream = dset[()]
             if subgroup == 'ys':
                 dset = f[group+'/'+subgroup]
-                ys_stream = dset[()]
-    
+                ys_stream = dset[()] 
     len = event_gs_stream.shape[0]
     array_stream = np.zeros((len, 4))
     array_stream[:, 0] = event_gs_stream
@@ -35,7 +34,6 @@ def get_stream(path):
     array_stream[:, 2] = xs_stream
     array_stream[:, 3] = ys_stream
     array_stream = array_stream[10000000:10100000, :]
-    print(array_stream.shape[0])
     return array_stream
 
 
