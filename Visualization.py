@@ -15,5 +15,5 @@ def visualization(array_stream, speed):
     plt.show()
     image = cv.medianBlur(np.uint8(image),5)
     circles = cv.HoughCircles(image,cv.HOUGH_GRADIENT,dp=1,minDist=100,param1=50,param2=30,minRadius=250,maxRadius=400)
-    print(circles)
+    print(circles[0])
     return circles[0]
