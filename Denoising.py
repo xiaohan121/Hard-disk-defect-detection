@@ -23,5 +23,5 @@ def denoising(array_stream, time_interval = 0.01, space_interval = 5):
             # print("好点")
         # else:
             # print("噪音")
-                
+    array_stream_new = array_stream_new[1:, :]            
     return array_stream_new

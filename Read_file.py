@@ -33,8 +33,26 @@ def get_stream(path):
     array_stream[:, 1] = ts_stream
     array_stream[:, 2] = xs_stream
     array_stream[:, 3] = ys_stream
-    array_stream = array_stream[10000000:10100000, :]
-    return array_stream
+    start_1 = int(len / 4)
+    end_1 = start_1 + 200000
+    start_2 = int(len / 4 * 3)
+    end_2 = start_2 + 200000
+    array_stream1 = array_stream[start_1:end_1, :]
+    array_stream2 = array_stream[start_2:end_2, :]
+    return array_stream1, array_stream2
+
+
+def get_label(path):
+    data_list = []
+    with open(path, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+    for line in data:
+        line = line.strip('\n')
+        data_split = line.split(',')
+        temp = list(map(float, data_split))
+        data_list.append(temp)
+    data_array = np.array(data_list)
+    return data_array
 
 
 
