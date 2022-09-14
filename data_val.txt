@@ -1,0 +1,4 @@
+C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/14.png C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/14.txt
+C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/22.png C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/22.txt
+C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/27.png C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/27.txt
+C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/40.png C:\Users\Du\Desktop\faster-rcnn-pytorch-master\faster-rcnn-pytorch-master\data_set/data/40.txt
